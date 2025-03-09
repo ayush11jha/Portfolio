@@ -49,26 +49,26 @@ export const navItems = [
       spareImg: "/b4.svg",
     },
   
-    // {
-    //   id: 5,
-    //   title: "Rizzup-BOT",
-    // //   description: "The Inside Scoop",
-    //   className: "md:col-span-3 md:row-span-2",
-    //   imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    //   titleClassName: "lg:p-5",
-    // //   img: "/b5.svg",
-    //   spareImg: "/grid.svg",
-    // },
-    // {
-    //   id: 6,
-    //   title: "Do you want to start a project together?",
-    //   description: "",
-    //   className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    //   imgClassName: "",
-    //   titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    //   img: "",
-    //   spareImg: "",
-    // },
+    {
+      id: 5,
+      title: "Rizzup-BOT",
+    //   description: "The Inside Scoop",
+      className: "md:col-span-3 md:row-span-2",
+      imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+      titleClassName: "lg:p-5",
+    //   img: "/b5.svg",
+      spareImg: "/grid.svg",
+    },
+    {
+      id: 6,
+      title: "Do you want to start a project together?",
+      description: "",
+      className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+      imgClassName: "",
+      titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+      img: "",
+      spareImg: "",
+    },
   ];
   
   export const projects = [
@@ -163,13 +163,13 @@ export const navItems = [
       thumbnail: "/exp4.svg",
     },
     {
-      id: 11,
+      id: 10,
       title: "NodeJS",
       className: "md:col-span-2",
       thumbnail: "/exp4.svg",
     },
     {
-      id: 12,
+      id: 11,
       title: "Vercel",
       className: "md:col-span-2",
       thumbnail: "/exp4.svg",
@@ -200,6 +200,6 @@ export const navItems = [
     { id: 3, name: "LinkedIn", link: "https://www.linkedin.com/in/ayush-jha-9b3519202/", img: "" },
     { id: 4, name: "LeetCode", link: "https://leetcode.com/u/ajha88274/", img: "" },
     // { id: 5, name: "Medium", link: "https://medium.com/@rishabhpandey230", img: "" },
-    { id: 6, name: "GeeksforGeeks", link: "https://www.geeksforgeeks.org/user/ajha88274/", img: "" },
+    { id: 5, name: "GeeksforGeeks", link: "https://www.geeksforgeeks.org/user/ajha88274/", img: "" },
     // Add more social media links as needed
   ]
