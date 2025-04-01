@@ -1,3 +1,5 @@
+"use client"; // Mark this file as a client component
+
 import { useEffect, useState } from "react";
 
 export default function ClientSideOnly({ children }: { children: React.ReactNode }) {
