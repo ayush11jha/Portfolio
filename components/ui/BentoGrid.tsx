@@ -65,10 +65,10 @@ export const BentoGridItem = ({
 
   const [copied, setCopied] = useState(false);
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState<{ user: string; bot: string }[]>([]);
-  const [loading, setLoading] = useState(false);
+  // const [messages, setMessages] = useState<{ user: string; bot: string }[]>([]);
+  // const [loading, setLoading] = useState(false);
 
-  const messageContainerRef = useRef<HTMLDivElement | null>(null);
+  // const messageContainerRef = useRef<HTMLDivElement | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -118,11 +118,11 @@ export const BentoGridItem = ({
     // }
   };
 
-  useEffect(() => {
-    if (messageContainerRef.current) {
-      messageContainerRef.current.scrollTop = messageContainerRef.current.scrollHeight;
-    }
-  }, [messages]);
+  // useEffect(() => {
+  //   if (messageContainerRef.current) {
+  //     messageContainerRef.current.scrollTop = messageContainerRef.current.scrollHeight;
+  //   }
+  // }, [messages]);
 
   const defaultOptions = {
     loop: copied,
@@ -275,7 +275,7 @@ export const BentoGridItem = ({
 
           {id === 5 && (
             <div className="flex flex-col h-full">
-                <div ref={messageContainerRef} className="flex-1 overflow-y-auto rounded-md h-[310px] mt-2 mb-3 " style={{ maxHeight: '310px' }}>
+                <div className="flex-1 overflow-y-auto rounded-md h-[310px] mt-2 mb-3 " style={{ maxHeight: '310px' }}>
                 {/* {messages.length === 0 ? (
                     <div className="flex items-center justify-center h-full text-gray-500">
                         <span className="text-center">You can ask anything about me</span>
