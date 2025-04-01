@@ -71,49 +71,50 @@ export const BentoGridItem = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (input.trim()) {
-      // Simulate a response from the chatbot
-      const userMessage = { user: input, bot: "" };
-      setMessages((prev) => [...prev, userMessage]);
-      setInput(""); // Clear input
-      setLoading(true);
-    console.log(input)
-      try {
-        // Make API call to your chatbot backend
-        const response = await fetch('https://rizzup-bot.onrender.com/chat', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ question: input }), // Adjust payload as needed
-        });
+    console.log(input);
+    // if (input.trim()) {
+    //   // Simulate a response from the chatbot
+    //   const userMessage = { user: input, bot: "" };
+    //   setMessages((prev) => [...prev, userMessage]);
+    //   setInput(""); // Clear input
+    //   setLoading(true);
+    // console.log(input)
+    //   try {
+    //     // Make API call to your chatbot backend
+    //     const response = await fetch('https://rizzup-bot.onrender.com/chat', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body: JSON.stringify({ question: input }), // Adjust payload as needed
+    //     });
 
-        // Check if response is OK
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
+    //     // Check if response is OK
+    //     if (!response.ok) {
+    //       throw new Error('Network response was not ok');
+    //     }
 
-        const data = await response.json();
-        console.log(data)
+    //     const data = await response.json();
+    //     console.log(data)
         
-        // Assuming the response contains a "reply" field
-        const botMessage = { user: userMessage.user, bot: data.answer }; // Adjust based on your API response structure
-        // setMessages((prev) => [...prev, botMessage]);
-        setMessages((prev) => {
-          const newMessages = prev.slice(); // Copy existing messages
-          newMessages[newMessages.length - 1] = botMessage; // Replace the last message (loading message)
-          return newMessages;
-        });
+    //     // Assuming the response contains a "reply" field
+    //     const botMessage = { user: userMessage.user, bot: data.answer }; // Adjust based on your API response structure
+    //     // setMessages((prev) => [...prev, botMessage]);
+    //     setMessages((prev) => {
+    //       const newMessages = prev.slice(); // Copy existing messages
+    //       newMessages[newMessages.length - 1] = botMessage; // Replace the last message (loading message)
+    //       return newMessages;
+    //     });
 
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        const botMessage = { user: "", bot: "Sorry, there was an error." };
-        setMessages((prev) => [...prev, botMessage]);
-        setInput("");
-      } finally {
-        setLoading(false);
-      }
-    }
+    //   } catch (error) {
+    //     console.error('Error fetching data:', error);
+    //     const botMessage = { user: "", bot: "Sorry, there was an error." };
+    //     setMessages((prev) => [...prev, botMessage]);
+    //     setInput("");
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // }
   };
 
   useEffect(() => {
@@ -274,7 +275,7 @@ export const BentoGridItem = ({
           {id === 5 && (
             <div className="flex flex-col h-full">
                 <div ref={messageContainerRef} className="flex-1 overflow-y-auto rounded-md h-[310px] mt-2 mb-3 " style={{ maxHeight: '310px' }}>
-                {messages.length === 0 ? (
+                {/* {messages.length === 0 ? (
                     <div className="flex items-center justify-center h-full text-gray-500">
                         <span className="text-center">You can ask anything about me</span>
                     </div>
@@ -290,7 +291,10 @@ export const BentoGridItem = ({
                         </div>
                     </div>
                     ))
-                )}
+                )} */}
+                <div className="flex items-center justify-center h-full text-gray-500">
+                        <span className="text-center">You can ask anything about me</span>
+                </div>
                 </div>
                 <form onSubmit={handleSubmit} className="flex">
                     <input

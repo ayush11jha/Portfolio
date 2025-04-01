@@ -1,4 +1,4 @@
-export const navItems = [
+  export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
     { name: "Skills", link: "#skills" },
@@ -92,7 +92,7 @@ export const navItems = [
       id: 3,
       title: "Predicting-life-insurance-based-on-his-age ",
       des: "This System uses machine learning to assess an individual's age and other factors to predict their insurance eligibility, premium, and risk category.",
-      img: "/project_3.gif",
+      img: "/project3.gif",
       iconLists: ["/python.svg", "/ts.svg", "/ai.svg", ],
       href: "https://github.com/ayush11jha/Predicting-life-insurance-based-on-his-age",
     },
@@ -100,7 +100,7 @@ export const navItems = [
       id: 4,
       title: "Expense-Tracker ",
       des: "It is a smart financial management system that helps users track, categorize, and analyze their expenses for better budgeting and savings.",
-      img: "/project_4.gif",
+      img: "/project4.gif",
       iconLists: ["/javascript.svg","/nodejs.svg", ],
       href: "https://github.com/ayush11jha/Expense-Tracker",
     },
