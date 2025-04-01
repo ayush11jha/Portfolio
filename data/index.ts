@@ -6,7 +6,6 @@
     { name: "Contact", link: "#contact" },
   ];
 
-  import { FaXTwitter } from "react-icons/fa6";
   export const gridItems = [
     {
       id: 1,
