@@ -3,9 +3,9 @@ import localFont from "next/font/local";
 // import { Inter } from "next/font/google";
 import dynamic from "next/dynamic"
 import "./globals.css";
-import { ThemeProvider } from "./provider";
+import { ThemeProvider } from "../app/provider";
 
-const ClientOnly = dynamic(() => import('@/components/Wrappers/ClientSideOnly'), { ssr: false });
+const ClientOnly = dynamic(() => import('@/components/Wrappers/ClientSideOnly'), { ssr: !!false });
 
 // const inter = Inter({ subsets: ["latin"] });
 

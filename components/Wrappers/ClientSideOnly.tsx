@@ -5,4 +5,4 @@ const ClientOnly = ({ children }: { children: ReactNode }) => {
   return <>{children}</>;
 };
 
-export default dynamic(() => Promise.resolve(ClientOnly), { ssr: false });
+export default dynamic(() => Promise.resolve(ClientOnly), { ssr: !!false });
