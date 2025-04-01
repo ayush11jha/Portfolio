@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 // import { Inter } from "next/font/google";
+import dynamic from "next/dynamic"
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
+const ClientOnly = dynamic(() => import('@/components/Wrappers/ClientSideOnly'), { ssr: false });
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         // className={inter.className}
-      >
+      ><ClientOnly>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -42,6 +44,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        </ClientOnly>
       </body>
     </html>
   );
