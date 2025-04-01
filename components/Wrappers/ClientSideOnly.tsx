@@ -1,8 +1,13 @@
-import dynamic from 'next/dynamic';
-import { ReactNode } from 'react';
+import { useEffect, useState } from "react";
 
-const ClientOnly = ({ children }: { children: ReactNode }) => {
+export default function ClientSideOnly({ children }: { children: React.ReactNode }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null; // Prevent SSR issues
+
   return <>{children}</>;
-};
-
-export default dynamic(() => Promise.resolve(ClientOnly), { ssr: !!false });
+}
