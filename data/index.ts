@@ -200,5 +200,5 @@
     { id: 4, name: "LeetCode", link: "https://leetcode.com/u/ajha88274/", img: "" },
     // { id: 5, name: "Medium", link: "https://medium.com/@rishabhpandey230", img: "" },
     { id: 5, name: "GeeksforGeeks", link: "https://www.geeksforgeeks.org/user/ajha88274/", img: "" },
-    // Add more social media links as needed
+    // Add +--more social media links as needed
   ]
