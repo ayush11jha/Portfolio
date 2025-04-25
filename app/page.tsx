@@ -7,6 +7,9 @@ import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProject";
 import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
+
+import ErrorBoundary from "@/components/ErrorBoundary"; // 👈 import it
+
 import { navItems } from "@/data";
 
 export default function Home() {
@@ -25,11 +28,11 @@ export default function Home() {
   );
 }
 
-const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  try {
-    return <>{children}</>;
-  } catch (error) {
-    console.error("Component Error:", error);
-    return <div>Error loading component.</div>;
-  }
-};
+// const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
+//   try {
+//     return <>{children}</>;
+//   } catch (error) {
+//     console.error("Component Error:", error);
+//     return <div>Error loading component.</div>;
+//   }
+// };
